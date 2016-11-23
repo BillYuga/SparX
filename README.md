@@ -1,4 +1,4 @@
-# UMNIFIY
+# SparX
 Code cleaning tool
 # About
 > UMNIFY is a code cleaning tool based on prettify developed by Sherlock Wisdom (Wisdom Nji).
