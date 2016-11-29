@@ -46,15 +46,16 @@ string SPARX::sparx(string filename){
 			continue;
 		}
 		//check if string all_strings[i] is a case
-		else if(file[i] == "case" _case = true);
+		else if(all_strings[i] == "case" _case = true);
 
 		//check is string all_strings[i] is a quote
-		else if(file[i][0] == '"') quote = !quote;
+		else if(all_strings[i][0] == '"') quote = !quote;
 
-		else if(file[i][file[i].size()-1] == '"') quote = !quote;
+		else if(all_strings[i][all_strings[i].size()-1] == '"') quote = !quote;
 
 		//check if string all_strings[i] is the beginning of a for loop
-		else if(); 
+		else if(file[i][0] == 'f' && file[i][1] == 'o' && file[i][2] == 'r' && file[i][3] == '(') loop = true;//when loop is true, newline after ; is disabled
+			//
 
 	} 
 
