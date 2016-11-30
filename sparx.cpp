@@ -24,29 +24,29 @@ vector<string> seperate(string input, bool show = false){
 //the constructor SPARX::sparx
 
 
-string SPARX::sparx(string all_stringsname){
-	_all_stringsname = all_stringsname;
+string SPARX::sparx(string filename){
+	_filename = filename;
 
 	//read all_strings into the vector one string at time
-	ifstream inall_strings(all_stringsname.c_str());
+	ifstream infile(filename.c_str());
 
-	inall_strings >> temp;
+	infile >> temp;
 	if(temp.empty()) return "all_strings not found!";
 
 	all_strings.push_back(temp);
-	while(inall_strings >> temp) all_strings.push_back(temp);
-	while(getline(inall_strings, temp)) all_lines.push_back(temp);
+	while(infile >> temp) all_strings.push_back(temp);
+	while(getline(infile, temp)) all_lines.push_back(temp);
 
 	//loop throught all_strings to break down the code
 	for(int i = 0; i < all_strings.size(); i++){
 		if(all_strings[i] == "#include"){
-			headers.pushback(all_strings[i]);
-			headers.pushback(all_strings[i+1]); //name of header
+			headers.push_back(all_strings[i]);
+			headers.push_back(all_strings[i+1]); //name of header
 			i++;
 			continue;
 		}
 		//check if string all_strings[i] is a case
-		else if(all_strings[i] == "case" _case = true);
+		else if(all_strings[i] == "case") _case = true;
 
 		//check is string all_strings[i] is a quote
 		else if(all_strings[i][0] == '"') quote = !quote;
@@ -63,7 +63,7 @@ string SPARX::sparx(string all_stringsname){
 			continue;
 		}
 
-		else if(all_strings[i][all_strings[i].size()-1] == "}"){
+		else if(all_strings[i][all_strings[i].size()-1] == '}'){
 			tab--;//removes tab
 			index_flag = true;//tab next item to be written
 			write = write + index(tab) + all_strings[i] + "\n";
@@ -108,18 +108,16 @@ string SPARX::sparx(string all_stringsname){
 	
 	temp.erase();
 
-	} 
-
 }
 
-string UMINIFY::index(int tabs)
+string SPARX::index(int tabs)
 {
 	string ret;
 	for(int i=0;i<tabs;i++, ret += "\t");
 	return ret;
 }
 
-string UMINIFY::output(string output)
+string SPARX::output(string output)
 {
 	string extension;
 	string temp;

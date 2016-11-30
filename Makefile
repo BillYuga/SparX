@@ -1,2 +1,2 @@
 all:
-	g++ -0 SparX sparx.cpp
+	g++ -o SparX  main.cpp sparx.cpp -std=c++11
