@@ -11,6 +11,7 @@ The readme will be updated as functionalities are being added to the tool
 # Usage
 - To use the tool, run the following command on the terminal:-
   - $Sparx filename
+  
 where filename is the name of the source file you want to clean.
 
 
