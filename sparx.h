@@ -13,7 +13,12 @@ class SPARX{
 protected:
 	string _filename;
 private:
-	string temp, write;
+	string temp, write;\
+
+	/**
+		This function keeps track of the number of tabs to print
+		@param tab --number of tabs to print
+	*/
 	string index(int tab);
 	vector<string> all_strings; //contains all strings in the source file
 	vector<string> headers;//contains all the headers in the source file
