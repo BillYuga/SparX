@@ -8,6 +8,7 @@
 using namespace std;
 
 vector<string> seperate(string input, bool show);
+void help();
 
 class SPARX{
 protected:

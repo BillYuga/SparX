@@ -4,6 +4,15 @@
 
 using namespace std;
 
+void help(){
+	cout << "**** USAGE *****" << endl;
+	cout <<"-> You can enter the file name as a command line arguement" << endl
+		 <<"$ SparX filename" << endl
+		 <<"-> file should either be *.cpp or *.c" << endl
+		 <<"-> To see usage information enter the following command" << endl
+		 <<"$ SparX -h or SparX --help\n" << endl;
+}//end of help
+
 vector<string> seperate(string input, bool show = false){
 	string temp;
 	vector<string> ret;//this vector will hold strings to be returned by the function.
@@ -21,9 +30,7 @@ vector<string> seperate(string input, bool show = false){
 	return ret;
 }//end of seperate
 
-//the constructor SPARX::sparx
-
-
+//constructor SPARX::sparx
 string SPARX::sparx(string filename){
 	_filename = filename;
 
