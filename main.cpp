@@ -3,6 +3,12 @@
 
 using namespace std;
 
+/**
+	main function to clean code 
+	@param argc --number of command line arguments, maximum of 2 for now
+	@param argv[] --argv[0] name of program(SparX) and argv[1] name of sourcefile to clean.
+*/
+
 int main(int argc, char* argv[])
 
 {
